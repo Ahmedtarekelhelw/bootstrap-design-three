@@ -1,0 +1,43 @@
+/* start header  */
+
+header {
+    .upper-nav {
+        background-color: $mainColor;
+        color: #fff;
+        .row {
+        span {
+            color: #bfc6c9;
+        }
+        .col-md:last-child {
+            span:last-child {
+                border: 1px solid $secColor;
+                padding: 5px 10px;
+            }
+        } 
+        }
+    }
+    .navbar {
+        background-color: $usedColor;
+        .navbar-brand {
+            color: $mainColor;
+            span {
+                color: $secColor;
+            }
+        }
+        .navbar-nav {
+            .nav-link {
+                &.active {
+                    color: $secColor;
+                }
+                &:hover {
+                    color: $secColor;
+                }
+                &:focus {
+                    color: $secColor;
+                }
+            }
+        }
+    }
+}
+
+/* end header  */

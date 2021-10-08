@@ -1,0 +1,268 @@
+$mainColor:#08526d;
+$secColor:#ec1c23;
+$usedColor:#fff;
+$pColor:#6a6a6a;
+$sectionColor:#f7f7f7;
+
+
+@import "header";
+
+/* start landing  */
+.carousel {
+    .overlay {
+        color: $usedColor ;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.5);
+        h2 {
+            font-size: 60px;
+            @media (max-width:767px) {
+                font-size:40px ;
+            }
+            span {
+            background-color: $secColor;
+        }
+        }      
+    }
+    .carousel-inner {
+        .carousel-item.one {
+            @extend %cover;
+            background: url(../img/slider01.webp);
+        }
+        .carousel-item.two {
+            @extend %cover;
+            background: url(../img/slider02.webp);
+        }
+        .carousel-item.three {
+            @extend %cover;
+            background: url(../img/slider03.webp);
+        }
+    }
+}
+
+%cover {
+    background-size: cover;
+}
+
+/* end landing  */
+
+/* start features  */
+
+.features {
+    .row {
+        i {
+            color: $usedColor;
+            background-color: $secColor;
+            width: 60px;
+            height: 60px;
+            padding-top: 15px;
+        }
+        h4 {
+            color: $mainColor;
+        }
+        p {
+            color: $pColor;
+        }
+    }
+}  
+
+/* end features  */
+
+
+/* start overview  */
+.overview {
+    background-color: $sectionColor;
+    p {
+        color:$pColor ;
+        font-weight: 400;
+    }
+    span {
+        color: #8b8a8a;
+    }
+    a {
+        background-color: $secColor;
+        color: $usedColor;
+        padding: 10px 15px;
+        width: fit-content;
+        border-radius: 3px;
+    }
+}
+
+/* end overview  */
+
+
+/* start work  */
+.work {
+    p {
+        color: $pColor;
+    }
+    li {
+        border: 2px solid $mainColor;
+        transition: 0.3s;
+        color: $mainColor; 
+        cursor: pointer;
+        &:hover {
+            @extend %hocerActive; 
+        }
+        &.active {
+            @extend %hocerActive; 
+        }
+    }
+    .work-img {
+        img {
+            transition: 0.5s;
+        }
+    }
+}
+
+%hocerActive {
+    background-color: $secColor;
+    color: $usedColor;
+    border-color: $secColor;
+}
+/* end work  */
+
+/* start posts  */
+
+/* .posts h2 {font-size: 50px;} */
+.posts {
+    p {
+        color: $pColor;
+        font-weight: 400;
+    }
+    h5 {
+        color: $mainColor;
+    }
+    a {
+        color: $secColor;
+    }
+} 
+
+/* end posts  */
+
+
+/* start testimonials  */
+.testimonials {
+    background: url(../img/testimonial.webp) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    } 
+    .slide {
+        z-index: 2;
+    }
+    .carousel-inner {
+        .carousel-item {
+            .carousel-caption {
+                top: 45%;
+                transform: translateY(-50%);
+                h5 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+/* end testimonials  */
+
+/* start pricing  */
+.pricing {
+    background-color: $sectionColor;
+    p {
+        color: $pColor;
+    }
+    .plan {
+        background-color: $usedColor;
+        border: 1px solid #c2c1c1;
+        border-radius: 4px;
+        h3 {
+            color:$mainColor;
+        }
+        .price {
+            background-color: $sectionColor;
+            color: $mainColor;
+        }
+    }
+    .row {
+        .col-lg-4:nth-child(2) {
+            .plan {
+                .price {
+                    background-color: $secColor;
+                    color:$usedColor;
+                }
+            }
+            a {
+                background-color: $secColor;
+            }
+        }
+    }
+    a {
+        background-color: $mainColor;
+        color: $usedColor;
+        padding: 10px 15px;
+        width: fit-content;
+    }
+}
+
+/* end pricing  */
+
+/* start choose us  */
+.choose-us {
+    .row {
+        .col-lg:last-child {
+            background-color: $mainColor;
+            color: $usedColor;
+        }
+    }
+    img {
+        max-width: 100%;
+        min-height: 100%;
+    }
+    p {
+        font-size: 17px;
+        line-height: 2;
+    }
+    a {
+        background-color: $secColor;
+        color: $usedColor;
+        padding: 10px 15px;
+    }
+}
+/* end choose us  */
+
+/* start stats  */
+.stats {
+    i {
+        color: $mainColor;
+    }
+    h3 {
+        color: $mainColor;
+    }
+    span {
+        color: $secColor;
+    }
+}
+
+/* end stats  */
+
+
+/* start contact us  */
+.contact {
+    background-color: $secColor; 
+    color: $usedColor; 
+    padding: 70px 0;
+    a {
+        color: $usedColor;
+        border:2px solid $usedColor;
+    }
+}
+
+/* end contact us  */
+
+@import "footer";
